@@ -25,7 +25,7 @@ composer require danielsundermeier/laravel-model-path
 
 `routes/web.php`
 
-```
+```php
 Route::resource('movies', App\Http\Controllers\Movies\MovieController::class);
 ```
 
@@ -59,7 +59,7 @@ $movie->edit_path; // /movies/1/edit
 
 `routes/web.php`
 
-```
+```php
 Route::resource('{type}/{model}/watched', App\Http\Controllers\Watched\WatchedController::class);
 ```
 
