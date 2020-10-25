@@ -8,12 +8,23 @@ trait HasModelPath
 {
     public function initializeHasModelPath()
     {
+        if (is_null($this->id)) {
+            return;
+        }
+
         $this->append([
             'create_path',
             'edit_path',
             'index_path',
             'path',
         ]);
+    }
+
+    public static function indexPath(array $attributes = []) : string
+    {
+        $instance = new static($attributes);
+
+        return $instance->index_path;
     }
 
     public function getPathAttribute()
@@ -48,10 +59,6 @@ trait HasModelPath
 
     public function getRouteParameterAttribute() : array
     {
-        if (! $this->id) {
-            return [];
-        }
-
         return [
             Str::singular($this->base_route) => $this->id
         ];
