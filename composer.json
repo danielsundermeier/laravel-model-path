@@ -1,0 +1,33 @@
+{
+    "name": "danielsundermeier/laravel-model-path",
+    "description": "Description.",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Sundermeier",
+            "email": "packages@d15r.de"
+        }
+    ],
+    "require": {
+
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "D15r\\ModelPath\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "D15r\\ModelPath\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
