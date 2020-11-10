@@ -29,7 +29,7 @@ composer require danielsundermeier/laravel-model-path
 Route::resource('movies', App\Http\Controllers\Movies\MovieController::class);
 ```
 
-Models must use the trait `HasModelPath` have a `const ROUTE_NAME`. 
+Models must use the trait `HasModelPath` and have a `const ROUTE_NAME`. 
 
 `app/Models/Movie.php`
 
