@@ -12,12 +12,17 @@ trait HasModelPath
             return;
         }
 
-        $this->append([
+        $this->append($this->getAvailablePaths());
+    }
+
+    protected function getAvailablePaths() : array
+    {
+        return [
             'create_path',
             'edit_path',
             'index_path',
             'path',
-        ]);
+        ];
     }
 
     public static function indexPath(array $attributes = []) : string
