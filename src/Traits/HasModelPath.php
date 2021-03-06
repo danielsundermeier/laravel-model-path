@@ -8,12 +8,7 @@ trait HasModelPath
 {
     public function initializeHasModelPath()
     {
-        $this->append([
-            'create_path',
-            'edit_path',
-            'index_path',
-            'path',
-        ]);
+        $this->append($this->getAvailablePaths());
     }
 
     protected function getAvailablePaths() : array
