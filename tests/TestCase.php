@@ -1,8 +1,6 @@
 <?php
 
-namespace D15r\Deployment\Tests;
-
-use D15r\Deployment\DeploymentServiceProvider;
+namespace D15r\ModelPath\Tests;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -15,7 +13,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            DeploymentServiceProvider::class,
+            //
         ];
     }
 
